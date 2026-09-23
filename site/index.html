@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Wheel</title>
+  <meta name="description" content="Explore digital resources for the study of the ancient world. Search by topic, technology, audience, and more.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/datatables.min.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script defer src="vendor/jquery.min.js"></script>
+  <script defer src="vendor/datatables.min.js"></script>
+  <script defer src="app.js?v=3"></script>
+</head>
+<body>
+<a class="skip" href="#directory">Skip to resources</a>
+<header><div class="brand"><img src="favicon.svg" alt="" width="40" height="40"><span>The Wheel</span></div><span class="edition">A–C pilot collection</span></header>
+<main>
+  <div class="intro"><div><p class="eyebrow">DIGITAL CLASSICS DIRECTORY</p><h1>Find resources.<br>Make connections.</h1><p>Explore digital projects, tools, and collections for the study of the ancient world.</p></div><div class="collection"><strong id="total">—</strong><span>resources to explore</span></div></div>
+  <section class="search-panel" aria-label="Search resources">
+    <label for="search">Search the collection</label>
+    <input id="search" type="search" placeholder="Try epigraphy, GIS, Latin, or a creator’s name…" autocomplete="off">
+    <div class="filters">
+      <label>Technology<select id="technologies"><option value="">All technologies</option></select></label>
+      <label>Keyword<select id="keywords"><option value="">All keywords</option></select></label>
+      <label>Audience<select id="audiences"><option value="">All audiences</option></select></label>
+      <label>Project status<select id="status"><option value="">All statuses</option></select></label>
+    </div>
+    <details class="advanced"><summary>More search fields</summary><div class="filters">
+      <label>Title<input id="title" type="search" placeholder="Resource title"></label>
+      <label>Creator<input id="creators" type="search" placeholder="Person or organization"></label>
+      <label>Historical period<input id="period" type="search" placeholder="e.g. Late Antiquity"></label>
+      <label>Funding source<input id="funding" type="search" placeholder="Funder or institution"></label>
+    </div></details>
+    <div class="filter-footer"><span>Combine fields to narrow your results.</span><button id="clear" type="button">Clear filters</button></div>
+  </section>
+  <section id="explore" aria-labelledby="explore-heading" hidden>
+    <h2 id="explore-heading">Explore a resource</h2>
+    <article id="featured-resource"></article>
+  </section>
+  <section id="directory" aria-label="Resource directory"><div class="results-heading"><h2>Browse the collection</h2><span id="result-count" role="status" aria-live="polite">Loading resources…</span></div>
+  <p class="notice">Pilot data: records have not yet been fully reviewed. Project status and metadata notes are included in each resource’s details.</p>
+  <p id="error" role="alert" hidden>Resources could not be loaded. Please reload the page to try again.</p>
+  <div class="table-wrap"><table id="resources"><caption class="sr-only">Digital classics resources</caption><thead><tr><th>Resource</th><th>Technologies</th><th>Keywords</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+  </section>
+</main>
+<footer><span>The Wheel · A–C pilot</span><span id="updated"></span></footer>
+</body></html>
